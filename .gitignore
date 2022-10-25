@@ -3,6 +3,7 @@
 .import/
 export.cfg
 export_presets.cfg
+.DS_store
 
 # Mono-specific ignores
 .mono/
