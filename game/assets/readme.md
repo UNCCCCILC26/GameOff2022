@@ -1,1 +1,0 @@
-stores the assets (art/music/etc)
