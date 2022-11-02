@@ -6,7 +6,7 @@
 radius = 40.0
 height = 26.0
 
-[node name="You" type="KinematicBody2D"]
+[node name="Customer" type="KinematicBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
