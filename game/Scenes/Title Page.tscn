@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scenes/Title Page.gd" type="Script" id=1]
+[ext_resource path="res://Assets/lemon.png" type="Texture" id=2]
+[ext_resource path="res://Assets/cups.png" type="Texture" id=3]
 
 [node name="Root" type="Node2D"]
 script = ExtResource( 1 )
@@ -14,11 +16,27 @@ margin_right = 1024.0
 margin_bottom = 598.0
 color = Color( 0.929412, 0.964706, 0.32549, 1 )
 
+[node name="table" type="ColorRect" parent="TitleScreen"]
+margin_top = 464.0
+margin_right = 1019.0
+margin_bottom = 600.0
+color = Color( 0.360784, 0.145098, 0, 1 )
+
+[node name="Lemon" type="Sprite" parent="TitleScreen"]
+position = Vector2( 179, 462 )
+scale = Vector2( 0.631295, 0.533408 )
+texture = ExtResource( 2 )
+
+[node name="Cups" type="Sprite" parent="TitleScreen/Lemon"]
+position = Vector2( 1021.81, 36.0726 )
+scale = Vector2( 1.03808, 1.14512 )
+texture = ExtResource( 3 )
+
 [node name="Start" type="Button" parent="TitleScreen"]
-margin_left = 386.0
-margin_top = 248.0
-margin_right = 427.0
-margin_bottom = 272.0
+margin_left = 384.0
+margin_top = 208.0
+margin_right = 425.0
+margin_bottom = 232.0
 rect_scale = Vector2( 6.18519, 3.85468 )
 text = "Start"
 

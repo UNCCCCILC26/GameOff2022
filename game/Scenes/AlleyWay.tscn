@@ -1,3 +1,27 @@
 [gd_scene format=2]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="TitleScreen" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Background" type="ColorRect" parent="TitleScreen"]
+margin_right = 1024.0
+margin_bottom = 598.0
+color = Color( 0.188235, 0.188235, 0.188235, 1 )
+
+[node name="Building L" type="ColorRect" parent="TitleScreen"]
+margin_left = -10.0
+margin_top = -1.0
+margin_right = 181.0
+margin_bottom = 602.0
+rect_pivot_offset = Vector2( 148, 101 )
+color = Color( 0.333333, 0.333333, 0.333333, 1 )
+
+[node name="Building R" type="ColorRect" parent="TitleScreen"]
+margin_left = 830.0
+margin_top = -2.0
+margin_right = 1026.0
+margin_bottom = 597.0
+color = Color( 0.333333, 0.333333, 0.333333, 1 )
