@@ -9,18 +9,17 @@ script = ExtResource( 1 )
 margin_right = 40.0
 margin_bottom = 40.0
 
-[node name="Start" type="Button" parent="TitleScreen"]
-margin_left = 400.0
-margin_top = 200.0
-margin_right = 440.0
-margin_bottom = 240.0
-rect_scale = Vector2( 6.18519, 3.85468 )
+[node name="Background" type="ColorRect" parent="TitleScreen"]
+margin_right = 1024.0
+margin_bottom = 598.0
+color = Color( 0.929412, 0.964706, 0.32549, 1 )
 
-[node name="RichTextLabel" type="RichTextLabel" parent="TitleScreen/Start"]
-margin_left = 5.0
-margin_top = 10.0
-margin_right = 35.0
-margin_bottom = 28.0
-rect_scale = Vector2( 0.999018, 1.00747 )
+[node name="Start" type="Button" parent="TitleScreen"]
+margin_left = 386.0
+margin_top = 248.0
+margin_right = 427.0
+margin_bottom = 272.0
+rect_scale = Vector2( 6.18519, 3.85468 )
 text = "Start"
+
 [connection signal="pressed" from="TitleScreen/Start" to="." method="_on_Button_pressed"]

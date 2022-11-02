@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Screen Shot 2022-11-01 at 9.24.14 PM.png-54c55715053afe1c210922b975f3dd79.stex"
+path="res://.import/lemon.png-01b432a0d2226f359d9322c438948eef.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Screen Shot 2022-11-01 at 9.24.14 PM.png"
-dest_files=[ "res://.import/Screen Shot 2022-11-01 at 9.24.14 PM.png-54c55715053afe1c210922b975f3dd79.stex" ]
+source_file="res://Assets/lemon.png"
+dest_files=[ "res://.import/lemon.png-01b432a0d2226f359d9322c438948eef.stex" ]
 
 [params]
 
