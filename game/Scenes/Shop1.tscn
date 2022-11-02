@@ -1,0 +1,67 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Assets/lemon.png" type="Texture" id=2]
+
+[node name="Root" type="Node2D"]
+
+[node name="Shop1" type="Control" parent="."]
+margin_right = 1024.0
+margin_bottom = 596.0
+
+[node name="Background" type="ColorRect" parent="Shop1"]
+margin_right = 1024.0
+margin_bottom = 598.0
+color = Color( 0.929412, 0.964706, 0.32549, 1 )
+
+[node name="table" type="ColorRect" parent="Shop1"]
+margin_top = 464.0
+margin_right = 1025.0
+margin_bottom = 600.0
+color = Color( 0.360784, 0.145098, 0, 1 )
+
+[node name="shelf" type="ColorRect" parent="Shop1"]
+margin_left = 700.0
+margin_top = 400.0
+margin_right = 950.0
+margin_bottom = 420.0
+color = Color( 0.360784, 0.145098, 0, 1 )
+
+[node name="shelf2" type="ColorRect" parent="Shop1"]
+margin_left = 700.0
+margin_top = 300.0
+margin_right = 950.0
+margin_bottom = 320.0
+color = Color( 0.360784, 0.145098, 0, 1 )
+
+[node name="shelf3" type="ColorRect" parent="Shop1"]
+margin_left = 700.0
+margin_top = 200.0
+margin_right = 950.0
+margin_bottom = 220.0
+color = Color( 0.360784, 0.145098, 0, 1 )
+
+[node name="Sprite" type="Sprite" parent="Shop1"]
+position = Vector2( 750, 160 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 2 )
+
+[node name="Register" type="ColorRect" parent="Shop1"]
+margin_left = 50.0
+margin_top = 250.0
+margin_right = 300.0
+margin_bottom = 550.0
+color = Color( 0.576471, 0.576471, 0.576471, 1 )
+
+[node name="Money" type="ColorRect" parent="Shop1"]
+margin_left = 50.0
+margin_top = 20.0
+margin_right = 300.0
+margin_bottom = 70.0
+color = Color( 0.254902, 0.25098, 0.25098, 1 )
+
+[node name="Button" type="Button" parent="Shop1"]
+margin_left = 700.0
+margin_top = 20.0
+margin_right = 950.0
+margin_bottom = 70.0
+text = "Exit"
