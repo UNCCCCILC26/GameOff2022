@@ -1,6 +1,6 @@
 extends Node2D
 
-var playerBalance = 0 setget set_balance
+var playerBalance = 100000000000 setget set_balance
 
 signal playerBalance_changed
 
