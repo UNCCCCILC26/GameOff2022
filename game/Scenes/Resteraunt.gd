@@ -6,5 +6,6 @@ func _ready():
 	var instance = scene.instance()
 	instance.scalex = 1
 
+
 func _process(delta):
-	pass # Replace with function body.
+	$RichTextLabel.text = "Balance: " + str(Global.playerBalance)
