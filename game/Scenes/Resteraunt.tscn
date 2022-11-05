@@ -8,7 +8,6 @@
 [ext_resource path="res://Scenes/LemonMixer.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Customers.tscn" type="PackedScene" id=7]
 
-
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 3 )
 
