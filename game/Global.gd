@@ -17,3 +17,5 @@ func add_item(item,quantity):
 func remove_item(item,quantity):
 	inventory[item] -= quantity
 	
+	
+	
