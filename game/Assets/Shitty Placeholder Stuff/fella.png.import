@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/doogal.jpg-c2ca6f9efaa80c1c5f5f417e5709b0d0.stex"
+path="res://.import/fella.png-75af660b96134b1f0b6b7543f7c0d099.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/doogal.jpg"
-dest_files=[ "res://.import/doogal.jpg-c2ca6f9efaa80c1c5f5f417e5709b0d0.stex" ]
+source_file="res://Assets/Shitty Placeholder Stuff/fella.png"
+dest_files=[ "res://.import/fella.png-75af660b96134b1f0b6b7543f7c0d099.stex" ]
 
 [params]
 

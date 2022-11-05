@@ -1,12 +1,13 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Scenes/LemonadeStand_003.png" type="Texture" id=1]
+[ext_resource path="res://Assets/LemonadeStand_003.png" type="Texture" id=1]
 [ext_resource path="res://Actors/Hero.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scenes/Resteraunt.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Resteraunt.gd" type="Script" id=3]
 [ext_resource path="res://Actors/Station.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Assets/Shitty Placeholder Stuff/Screenshot_1.png" type="Texture" id=5]
 [ext_resource path="res://Scenes/LemonMixer.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Customers.tscn" type="PackedScene" id=7]
+
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 3 )
