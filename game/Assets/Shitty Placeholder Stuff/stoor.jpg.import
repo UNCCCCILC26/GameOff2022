@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fella.png-75af660b96134b1f0b6b7543f7c0d099.stex"
+path="res://.import/stoor.jpg-5161a412517b4c38e5056f5a5c0ab1d9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Shitty Placeholder Stuff/fella.png"
-dest_files=[ "res://.import/fella.png-75af660b96134b1f0b6b7543f7c0d099.stex" ]
+source_file="res://Assets/Shitty Placeholder Stuff/stoor.jpg"
+dest_files=[ "res://.import/stoor.jpg-5161a412517b4c38e5056f5a5c0ab1d9.stex" ]
 
 [params]
 
