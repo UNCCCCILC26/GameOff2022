@@ -18,4 +18,4 @@ func remove_item(item,quantity):
 	inventory[item] -= quantity
 	
 	
-	
+	#I love connor
