@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Text House.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Shitty Placeholder Stuff/lowng.jpg" type="Texture" id=2]
+
+[node name="Dialogue" type="Node2D"]
+
+[node name="Text House" type="Node2D" parent="."]
+script = ExtResource( 1 )
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 512.5, 300.5 )
+scale = Vector2( 1.2415, 0.966019 )
+texture = ExtResource( 2 )
+
+[node name="1" type="Position2D" parent="."]
+
+[node name="Control" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Person" type="Sprite" parent="Control"]
+
+[node name="TextBox" type="ColorRect" parent="Control"]
+margin_left = 121.0
+margin_top = 376.0
+margin_right = 867.0
+margin_bottom = 577.0
