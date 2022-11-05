@@ -11,4 +11,3 @@ func _on_Button_pressed():
 	instance.SceneSwitch = load("res://Scenes/Resteraunt.tscn")
 	instance.cutscene = 0
 	add_child(instance)
-
