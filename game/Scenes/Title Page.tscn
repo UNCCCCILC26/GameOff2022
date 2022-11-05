@@ -39,4 +39,5 @@ margin_right = 425.0
 margin_bottom = 232.0
 rect_scale = Vector2( 6.18519, 3.85468 )
 text = "Start"
+
 [connection signal="pressed" from="TitleScreen/Start" to="." method="_on_Button_pressed"]
