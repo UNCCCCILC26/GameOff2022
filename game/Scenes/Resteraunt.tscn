@@ -40,10 +40,10 @@ position = Vector2( 220, 400 )
 linkedScene = ExtResource( 7 )
 style = ExtResource( 5 )
 
-[node name="Character" parent="Main" instance=ExtResource( 2 )]
-position = Vector2( 100, 500 )
-scale = Vector2( 1.00079, 1.00898 )
-
 [node name="Pour Station" parent="Main" instance=ExtResource( 4 )]
 position = Vector2( 439.11, 402.499 )
 linkedScene = ExtResource( 8 )
+
+[node name="Character" parent="Main" instance=ExtResource( 2 )]
+position = Vector2( 100, 500 )
+scale = Vector2( 1.00079, 1.00898 )

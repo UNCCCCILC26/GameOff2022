@@ -21,5 +21,6 @@ func _on_DetectBox_area_exited(area):
 func _process(delta):
 	if Input.is_action_just_pressed("interact") and is_inside == true:
 		var inst = linkedScene.instance()
-		inst.rect_position.x = -200
+		#inst.rect_position.x = -200
 		get_node("../../Main").add_child(inst)
+		queue_free()
