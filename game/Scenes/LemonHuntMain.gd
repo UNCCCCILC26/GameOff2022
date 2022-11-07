@@ -7,10 +7,6 @@ var score = 0
 
 func randomSpawn(fruit):
 	var instance = fruit.instance()
-	rng.randomize()
-	#var randX = rng.randf_range(50,screenSize.x)
-	var randY = rng.randf_range(50,screenSize.y-50)
-	instance.position = Vector2(-30,randY)
 	add_child(instance)
 	instance.connect("Death",self,"incrementScore")
 	
