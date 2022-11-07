@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
+[ext_resource path="res://Assets/Shitty Placeholder Stuff/reticle.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Scope.gd" type="Script" id=2]
 [ext_resource path="res://Scenes/LemonHuntMain.gd" type="Script" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
 
 [node name="lemonhuntRoot" type="Node2D"]
 script = ExtResource( 3 )
@@ -15,3 +19,13 @@ margin_bottom = 14.0
 text = "Score: 0"
 
 [node name="Scope" type="KinematicBody2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="ScopeHitbox" type="Area2D" parent="Scope"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scope/ScopeHitbox"]
+shape = SubResource( 1 )
+
+[node name="Reticle" type="Sprite" parent="Scope/ScopeHitbox/CollisionShape2D"]
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 1 )
