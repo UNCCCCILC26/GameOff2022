@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Assets/LemonadeStand_003.png" type="Texture" id=1]
 [ext_resource path="res://Actors/Hero.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Assets/Shitty Placeholder Stuff/Screenshot_1.png" type="Texture" id=5]
 [ext_resource path="res://Scenes/Dialogue.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Actors/StationUI.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Pour Minigame.tscn" type="PackedScene" id=8]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 3 )
@@ -23,6 +24,9 @@ margin_left = 133.0
 margin_top = 34.0
 margin_right = 173.0
 margin_bottom = 74.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Customer Window" parent="Main" instance=ExtResource( 4 )]
 position = Vector2( 878, 400 )
@@ -35,6 +39,10 @@ scaley = 0.4
 position = Vector2( 220, 400 )
 linkedScene = ExtResource( 7 )
 style = ExtResource( 5 )
+
+[node name="Pour Station" parent="Main" instance=ExtResource( 4 )]
+position = Vector2( 439.11, 402.499 )
+linkedScene = ExtResource( 8 )
 
 [node name="Character" parent="Main" instance=ExtResource( 2 )]
 position = Vector2( 100, 500 )

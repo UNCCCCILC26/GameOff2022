@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Scenes/Text House.gd" type="Script" id=1]
+[ext_resource path="res://Dialogues/FirstTH.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Shitty Placeholder Stuff/lowng.jpg" type="Texture" id=2]
 [ext_resource path="res://Scenes/Control.gd" type="Script" id=3]
 [ext_resource path="res://Assets/Shitty Placeholder Stuff/ARLRDBD.TTF" type="DynamicFontData" id=4]

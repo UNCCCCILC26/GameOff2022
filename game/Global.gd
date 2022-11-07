@@ -19,4 +19,4 @@ func remove_item(item,quantity):
 	inventory[item] = inventory.get(item, 0) + int(quantity)
 	
 	
-	
+	#I love connor
