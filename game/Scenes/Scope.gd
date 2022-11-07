@@ -14,5 +14,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	var oldMousePos = get_viewport().get_mouse_position()
-	yield(get_tree().create_timer(5*delta),"timeout")
+	yield(get_tree().create_timer(10*delta),"timeout")
+	#oldMousePos.x = oldMousePos.x-30
 	self.position = oldMousePos
+	

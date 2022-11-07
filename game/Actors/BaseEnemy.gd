@@ -2,7 +2,7 @@ extends KinematicBody2D
 signal Death
 
 var base_speed = 200
-var mouse_inside = false
+var scope_inside = false
 var screenSize = Vector2(1024,600)
 var velocity = Vector2(0,0)
 var rng = RandomNumberGenerator.new()
@@ -17,14 +17,16 @@ func _ready():
 		self.position = Vector2(screenSize.x+30,randY)
 		moveLeft()
 
-func _on_LemonHitbox_mouse_entered():
-	mouse_inside = true
+func _on_LemonHitbox_area_shape_entered(a1,area,a3,a4):
+	if(area.is_in_group("Scopes")):
+		scope_inside = true
 
-func _on_LemonHitbox_mouse_exited():
-	mouse_inside = false
+func _on_LemonHitbox_area_shape_exited(a1,area,a3,a4):
+	if(area.is_in_group("Scopes")):
+		scope_inside = false
 
 func _process(_delta):
-	if Input.is_action_just_pressed("mouse_clicked") and mouse_inside == true:
+	if Input.is_action_just_pressed("mouse_clicked") and scope_inside == true:
 		queue_free()
 		emit_signal("Death")
 	if position.x > screenSize.x+40 or position.x < -40:

@@ -18,10 +18,10 @@ margin_right = 40.0
 margin_bottom = 14.0
 text = "Score: 0"
 
-[node name="Scope" type="KinematicBody2D" parent="."]
+[node name="Scope" type="KinematicBody2D" parent="." groups=["Scopes"]]
 script = ExtResource( 2 )
 
-[node name="ScopeHitbox" type="Area2D" parent="Scope"]
+[node name="ScopeHitbox" type="Area2D" parent="Scope" groups=["Scopes"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scope/ScopeHitbox"]
 shape = SubResource( 1 )

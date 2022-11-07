@@ -23,5 +23,6 @@ texture = ExtResource( 2 )
 
 [connection signal="mouse_entered" from="." to="." method="_on_Lemon_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_Lemon_mouse_exited"]
-[connection signal="mouse_entered" from="LemonHitbox" to="." method="_on_LemonHitbox_mouse_entered"]
-[connection signal="mouse_exited" from="LemonHitbox" to="." method="_on_LemonHitbox_mouse_exited"]
+[connection signal="area_shape_entered" from="LemonHitbox" to="." method="_on_LemonHitbox_area_shape_entered"]
+[connection signal="area_shape_exited" from="LemonHitbox" to="." method="_on_LemonHitbox_area_shape_exited"]
+[connection signal="body_entered" from="LemonHitbox" to="." method="_on_LemonHitbox_body_entered"]
