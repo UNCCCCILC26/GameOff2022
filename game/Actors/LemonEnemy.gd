@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream:game/Scenes/LemonEnemy.gd
 extends KinematicBody2D
 signal Death
 
@@ -27,9 +26,3 @@ func _physics_process(_delta):
 	velocity = velocity.normalized() * base_speed
 	velocity = move_and_slide(velocity)
 
-
-
-
-=======
-extends "res://Actors/BaseEnemy.gd"
->>>>>>> Stashed changes:game/Actors/LemonEnemy.gd
