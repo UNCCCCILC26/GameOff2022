@@ -1,17 +1,17 @@
 extends KinematicBody2D
 signal Death
 
-var base_speed = 200
+var base_speed
 var scope_inside = false
 var screenSize = Vector2(1024,600)
 var velocity = Vector2(0,0)
 var rng = RandomNumberGenerator.new()
 
-func _on_Hitbox_area_shape_entered(a1,area,a3,a4):
+func _on_Hitbox_area_shape_entered(_a1,area,_a3,_a4):
 	if(area.is_in_group("Scopes")):
 		scope_inside = true
 
-func _on_Hitbox_area_shape_exited(a1,area,a3,a4):
+func _on_Hitbox_area_shape_exited(_a1,area,_a3,_a4):
 	if(area != null and area.is_in_group("Scopes")):
 		scope_inside = false
 
