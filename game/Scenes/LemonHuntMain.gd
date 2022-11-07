@@ -1,7 +1,7 @@
 extends Node2D
 
 var lemonInstance = load("res://Actors/Lemon.tscn")
-#var raspberryInstance = load("res://Actors/Raspberry.tscn")
+var raspberryInstance = load("res://Actors/Raspberry.tscn")
 var blueberryInstance = load("res://Actors/Blueberry.tscn")
 var screenSize = Vector2(1024,600)
 var rng = RandomNumberGenerator.new()
@@ -18,11 +18,11 @@ func incrementScore():
 
 func _ready():
 	randomSpawn(lemonInstance)
-	#randomSpawn(raspberryInstance)
+	randomSpawn(raspberryInstance)
 	randomSpawn(blueberryInstance)
 
 func _process(_delta):
 	if Input.is_action_just_pressed("interact"):
 		randomSpawn(lemonInstance)
-		#randomSpawn(raspberryInstance)
+		randomSpawn(raspberryInstance)
 		randomSpawn(blueberryInstance)
