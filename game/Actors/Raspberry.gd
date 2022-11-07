@@ -1,1 +1,1 @@
-extends "res://Scripts/LemonEnemy.gd"
+extends "res://Actors/BaseEnemy.gd"
