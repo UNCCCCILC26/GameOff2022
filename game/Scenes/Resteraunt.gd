@@ -8,6 +8,5 @@ func _ready():
 func updateBalance():
 	$RichTextLabel.text = "Balance: " + str(Global.playerBalance)
 
-
 func _process(delta):
 	pass
