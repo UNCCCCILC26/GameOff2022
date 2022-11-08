@@ -1,8 +1,9 @@
 extends KinematicBody2D
 signal Death
+signal Hit
 
 var hitpoints = 2
-var base_speed
+var base_speed = 100
 var scope_inside = false
 var screenSize = Vector2(1024,600)
 var velocity = Vector2(0,0)
@@ -19,6 +20,7 @@ func _on_Hitbox_area_shape_exited(_a1,area,_a3,_a4):
 func _process(_delta):
 	if Input.is_action_just_pressed("mouse_clicked") and scope_inside == true:
 		hitpoints -= 1
+		emit_signal("Hit")
 		if(hitpoints <= 0):
 			queue_free()
 			emit_signal("Death")

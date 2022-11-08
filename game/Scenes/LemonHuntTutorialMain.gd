@@ -9,7 +9,21 @@ var lemonInstance = load("res://Actors/Lemon.tscn")
 var partTwoEmitStatus = false
 var spawnEnemies = false
 
-# Called when the node enters the scene tree for the first time.
+func incrementScore():
+	score += 1
+	$UI/Score.text = "Fruits Captured: %s" % score
+	if(score >= 4 and !partTwoEmitStatus):
+		spawnEnemies = false
+
+func partOneComplete():
+	emit_signal("partOne")
+
+func runDialogue():
+	print("Dialogue")
+	
+func endScene():
+	print("Scene Ended")
+
 func _ready():
 	var instance = tutLemonInstance.instance()
 	add_child(instance)
@@ -28,26 +42,3 @@ func _ready():
 	runDialogue()
 	yield(get_tree().create_timer(6),"timeout")
 	endScene()
-
-func _process(delta):
-	
-	pass
-	
-func incrementScore():
-	score += 1
-	$UI/Score.text = "Score: %s" % score
-	if(score >= 4 and !partTwoEmitStatus):
-		spawnEnemies = false
-
-func partOneComplete():
-	emit_signal("partOne")
-
-func runDialogue():
-	print("Dialogue")
-	
-func endScene():
-	print("Scene Ended")
-	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass

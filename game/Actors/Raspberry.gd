@@ -17,7 +17,7 @@ func _ready():
 		moveLeft()
 		movingRight = false
 	
-func _process(delta):
+func _process(_delta):
 	if(position.x < ((screenSize.x/2)+20) and position.x > ((screenSize.x/2)-20) and posCheck):
 		posCheck = false
 		shootPlayer()

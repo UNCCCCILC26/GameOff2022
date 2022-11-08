@@ -16,6 +16,8 @@ func _ready():
 		moveLeft()
 		movingRight = false
 	
+	
+	#replace the yields below w/ animations
 	while(true):
 		yield(get_tree().create_timer(1.25),"timeout")
 		stopMovement()
