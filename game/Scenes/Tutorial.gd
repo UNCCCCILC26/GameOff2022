@@ -1,6 +1,5 @@
 extends Node2D
 
-var start = false
 var meetCustomer = false
 var stationOne = false
 var stationTwo = false 

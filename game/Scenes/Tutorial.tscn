@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Assets/LemonadeStand_003.png" type="Texture" id=1]
 [ext_resource path="res://Actors/Hero.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scenes/Resteraunt.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/Tutorial.gd" type="Script" id=3]
 [ext_resource path="res://Actors/Station.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Assets/Shitty Placeholder Stuff/Screenshot_1.png" type="Texture" id=5]
 [ext_resource path="res://Scenes/Dialogue.tscn" type="PackedScene" id=6]
@@ -18,20 +18,26 @@ margin_right = 1022.0
 margin_bottom = 600.0
 
 [node name="Customer Window" parent="Main" instance=ExtResource( 4 )]
-position = Vector2( 689, 136 )
+position = Vector2( 802, 193 )
 linkedScene = ExtResource( 6 )
 style = ExtResource( 1 )
 scalex = 0.4
 scaley = 0.4
 
-[node name="Drink Station" parent="Main" instance=ExtResource( 4 )]
-position = Vector2( 204, 133 )
+[node name="Ice" parent="Main" instance=ExtResource( 4 )]
+position = Vector2( 636, 196 )
+linkedScene = ExtResource( 8 )
+style = ExtResource( 5 )
+
+[node name="Drink" parent="Main" instance=ExtResource( 4 )]
+position = Vector2( 287, 187 )
 linkedScene = ExtResource( 7 )
 style = ExtResource( 5 )
 
-[node name="Pour Station" parent="Main" instance=ExtResource( 4 )]
-position = Vector2( 445, 129 )
+[node name="Flavor" parent="Main" instance=ExtResource( 4 )]
+position = Vector2( 462, 191 )
 linkedScene = ExtResource( 8 )
+style = ExtResource( 5 )
 
 [node name="Character" parent="Main" instance=ExtResource( 2 )]
 position = Vector2( 75, 265 )
