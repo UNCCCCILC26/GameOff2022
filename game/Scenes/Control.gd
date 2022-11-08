@@ -27,6 +27,8 @@ func _physics_process(delta):
 			$Button2.visible = false
 		else:
 			$Button2.visible = true
+	else:
+		emit_signal("dialogue_done")
 
 func load_dialogue():
 	if dialogue_index < text.size():
