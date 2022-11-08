@@ -1,21 +1,33 @@
 extends Node2D
 
+signal partOne
+
 var score = 0
 var partOne = false
-var lemonInstance = load("res://Actors/LemonTutorial.tscn")
+var tutLemonInstance = load("res://Actors/LemonTutorial.tscn")
+var lemonInstance = load("res://Actors/Lemon.tscn")
+var partTwoEmitStatus = false
+var spawnEnemies = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var instance = lemonInstance.instance()
+	var instance = tutLemonInstance.instance()
 	add_child(instance)
 	instance.connect("Death",self,"incrementScore")
-	#load guy
-	#say thing
-	#pause until guy actually dies
-	#continue scene
-	#killa few more guys
-	#scene end
-	pass # Replace with function body.
+	instance.connect("Death",self,"partOneComplete")
+	runDialogue()
+	yield(self, "partOne")
+	spawnEnemies = true
+	runDialogue()
+	yield(get_tree().create_timer(2),"timeout")
+	while(spawnEnemies):
+		instance = lemonInstance.instance()
+		add_child(instance)
+		instance.connect("Death",self,"incrementScore")
+		yield(get_tree().create_timer(4),"timeout")
+	runDialogue()
+	yield(get_tree().create_timer(6),"timeout")
+	endScene()
 
 func _process(delta):
 	
@@ -24,9 +36,18 @@ func _process(delta):
 func incrementScore():
 	score += 1
 	$UI/Score.text = "Score: %s" % score
-	if(!partOne):
-		partOne = true
+	if(score >= 4 and !partTwoEmitStatus):
+		spawnEnemies = false
 
+func partOneComplete():
+	emit_signal("partOne")
+
+func runDialogue():
+	print("Dialogue")
+	
+func endScene():
+	print("Scene Ended")
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
