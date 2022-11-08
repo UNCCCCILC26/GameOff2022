@@ -18,15 +18,14 @@ func remove_item(item,quantity):
 	inventory[item] = inventory.get(item, 0) + int(quantity)
 	
 func _process(delta):
-	var pause = true
+	var pause = false
 	if Input.is_action_just_pressed("pause") and pause == false:
 		get_tree().paused = true
 		$pause.show()
 		pause = true
-		print("on")
 	elif Input.is_action_just_pressed("pause") and pause == true:
 		get_tree().paused = false
 		$pause.hide()
 		pause = false
-		print("off")
+
 
