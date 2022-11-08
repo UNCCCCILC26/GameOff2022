@@ -5,6 +5,7 @@ var posCheck = true
 
 func _ready():
 	base_speed = 100
+	hitpoints = 2
 	rng.randomize()
 	var randY = rng.randf_range(50,screenSize.y-50)
 	if(rng.randi_range(0,1) == 1):
