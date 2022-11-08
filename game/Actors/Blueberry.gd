@@ -1,10 +1,9 @@
 extends "res://Actors/BaseEnemy.gd"
 
 var movingRight = false
-var posCheck = true
 
 func _ready():
-	base_speed = 100
+	base_speed = 200
 	rng.randomize()
 	var randY = rng.randf_range(50,screenSize.y-50)
 	if(rng.randi_range(0,1) == 1):
@@ -16,16 +15,11 @@ func _ready():
 		moveLeft()
 		movingRight = false
 	
-func _process(delta):
-	if(position.x < ((screenSize.x/2)+20) and position.x > ((screenSize.x/2)-20) and posCheck):
-		posCheck = false
-		shootPlayer()
+	while(true):
 		yield(get_tree().create_timer(1.25),"timeout")
+		stopMovement()
+		yield(get_tree().create_timer(0.35),"timeout")
 		if(movingRight):
 			moveRight()
 		else:
 			moveLeft()
-	
-func shootPlayer():
-	stopMovement()
-	base_speed = 300
