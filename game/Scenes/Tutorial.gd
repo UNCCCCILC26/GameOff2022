@@ -1,6 +1,14 @@
 extends Node2D
 
-# Called when the node enters the scene tree for the first time.
+var start = false
+var meetCustomer = false
+var stationOne = false
+var stationTwo = false 
+var stationThree = false
+
+var tutorial = false
+
+
 func _ready():
 	Global.connect("playerBalanced_changed", self, "updateBalance")
 	updateBalance()
@@ -9,4 +17,6 @@ func updateBalance():
 	$RichTextLabel.text = "Balance: " + str(Global.playerBalance)
 
 func _process(delta):
-	pass
+	if stationThree:
+		tutorial = true
+
