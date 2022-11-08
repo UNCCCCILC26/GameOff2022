@@ -18,24 +18,24 @@ margin_right = 1022.0
 margin_bottom = 600.0
 
 [node name="Customer Window" parent="Main" instance=ExtResource( 4 )]
-position = Vector2( 802, 193 )
+position = Vector2( 823, 172 )
 linkedScene = ExtResource( 6 )
 style = ExtResource( 1 )
 scalex = 0.4
 scaley = 0.4
 
 [node name="Ice" parent="Main" instance=ExtResource( 4 )]
-position = Vector2( 636, 196 )
+position = Vector2( 298, 146 )
 linkedScene = ExtResource( 8 )
 style = ExtResource( 5 )
 
 [node name="Drink" parent="Main" instance=ExtResource( 4 )]
-position = Vector2( 287, 187 )
+position = Vector2( 455, 154 )
 linkedScene = ExtResource( 7 )
 style = ExtResource( 5 )
 
 [node name="Flavor" parent="Main" instance=ExtResource( 4 )]
-position = Vector2( 462, 191 )
+position = Vector2( 609, 158 )
 linkedScene = ExtResource( 8 )
 style = ExtResource( 5 )
 
