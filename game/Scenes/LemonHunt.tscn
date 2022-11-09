@@ -12,8 +12,9 @@
 script = ExtResource( 3 )
 
 [node name="TempBackground" type="Sprite" parent="."]
-position = Vector2( 500, 250 )
+position = Vector2( -138, -100 )
 texture = ExtResource( 4 )
+centered = false
 
 [node name="HuntView" type="Camera2D" parent="."]
 anchor_mode = 0
