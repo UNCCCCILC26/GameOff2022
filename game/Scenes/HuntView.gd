@@ -11,6 +11,6 @@ func _process(delta):
 	if(mousePos.x >= screenSize.x * edgeScale and mousePos.x <= screenSize.x):
 		position.x = cameraHomePosition.x + (mapOffset.x * ((mousePos.x-screenSize.x*edgeScale)/(mapOffset.x*2)))
 	elif (mousePos.x <= screenSize.x - (screenSize.x * edgeScale) and mousePos.x >= 0):
-		position.x = cameraHomePosition.x + (mapOffset.x * ((mousePos.x-screenSize.x*edgeScale)/(mapOffset.x*2)))
+		position.x = cameraHomePosition.x - (mapOffset.x * ((mapOffset.x*2)/(mousePos.x*edgeScale)))
 	else:
 		position.x = cameraHomePosition.x
