@@ -18,7 +18,6 @@ func set_balance(value):
 		playerBalance=value
 		emit_signal("set_balance", playerBalance)
 
-
 var inventory = {"lemon":0,"coconut":0, "strawberry":0, "cherry":0, "raspberry":0, "blackberry":0, "blueberry":0, "watermelon":0}
 
 func add_item(item,quantity):
@@ -29,3 +28,5 @@ func remove_item(item,quantity):
 	
 func _process(delta):
 	pass
+
+#The commit is for the sole purpose of staying ahead of Cody in commit count while also being worse at pushing useful commits.
