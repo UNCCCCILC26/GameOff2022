@@ -28,5 +28,5 @@ func _process(delta):
 		print("Tutorial Completed")
 		
 func generateOrder():
-	
+	pass
 
