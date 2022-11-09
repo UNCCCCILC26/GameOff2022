@@ -1,0 +1,66 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/Shitty Placeholder Stuff/pump_fortnite.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Shitty Placeholder Stuff/james.jpg" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 94.5, 160.125 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 513.75, 299.75 )
+scale = Vector2( 2.21706, 0.968395 )
+texture = ExtResource( 2 )
+
+[node name="BlueberryPump" type="StaticBody2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="BlueberryPump"]
+position = Vector2( 176, 262.138 )
+scale = Vector2( 0.562874, 0.562874 )
+texture = ExtResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="BlueberryPump"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BlueberryPump/Area2D"]
+position = Vector2( 175, 262.138 )
+shape = SubResource( 1 )
+
+[node name="StrawberryPump" type="StaticBody2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="StrawberryPump"]
+position = Vector2( 844, 262.138 )
+scale = Vector2( 0.562874, 0.562874 )
+texture = ExtResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="StrawberryPump"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StrawberryPump/Area2D"]
+position = Vector2( 845, 262.138 )
+shape = SubResource( 1 )
+
+[node name="CoconutPump" type="StaticBody2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="CoconutPump"]
+position = Vector2( 625, 264.138 )
+scale = Vector2( 0.562874, 0.562874 )
+texture = ExtResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="CoconutPump"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CoconutPump/Area2D"]
+position = Vector2( 624, 264.138 )
+shape = SubResource( 1 )
+
+[node name="RaspberryPump" type="StaticBody2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="RaspberryPump"]
+position = Vector2( 400, 262.138 )
+scale = Vector2( 0.562874, 0.562874 )
+texture = ExtResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="RaspberryPump"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RaspberryPump/Area2D"]
+position = Vector2( 401, 263.138 )
+shape = SubResource( 1 )
