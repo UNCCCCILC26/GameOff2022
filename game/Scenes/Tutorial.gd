@@ -1,11 +1,12 @@
 extends Node2D
 
-var meetCustomer = false
+var meetCustomer = true
 var stationOne = false
 var stationTwo = false 
 var stationThree = false
 
 var tutorial = false
+
 
 
 func _ready():
@@ -25,4 +26,7 @@ func _process(delta):
 	if stationThree:
 		tutorial = true
 		print("Tutorial Completed")
+		
+func generateOrder():
+	
 

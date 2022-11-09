@@ -4,6 +4,16 @@ var playerBalance = 100000000000 setget set_balance
 
 signal playerBalance_changed
 
+var spawnedFruit = {"lemon":0,"coconut":0, "strawberry":0, "cherry":0, "raspberry":0, "blackberry":0, "blueberry":0, "watermelon":0}
+
+func add_fruit(fruit,quantity):
+	spawnedFruit[fruit] = spawnedFruit.get(fruit, 0) + int(quantity)
+	
+func clear_fruit():
+	for k in spawnedFruit.keys():
+		spawnedFruit[k] = 0
+		
+
 func set_balance(value):
 		playerBalance=value
 		emit_signal("set_balance", playerBalance)
@@ -18,14 +28,4 @@ func remove_item(item,quantity):
 	inventory[item] = inventory.get(item, 0) + int(quantity)
 	
 func _process(delta):
-	var pause = false
-	if Input.is_action_just_pressed("pause") and pause == false:
-		get_tree().paused = true
-		$pause.show()
-		pause = true
-	elif Input.is_action_just_pressed("pause") and pause == true:
-		get_tree().paused = false
-		$pause.hide()
-		pause = false
-
-
+	pass
