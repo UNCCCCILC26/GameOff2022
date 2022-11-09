@@ -29,4 +29,4 @@ func remove_item(item,quantity):
 func _process(delta):
 	pass
 
-#The commit is for the sole purpose of staying ahead of Cody in commit count while also being worse at pushing useful commits.
+#What ever cody said is wrong.
