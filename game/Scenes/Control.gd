@@ -5,6 +5,7 @@ onready var text = get_parent().get_node("Text House").dialogue_1
 var dialogue_index = 0
 var finished
 var active
+signal dialogue_done
 
 func _ready():
 	load_dialogue()

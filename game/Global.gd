@@ -22,8 +22,7 @@ func add_item(item,quantity):
 func remove_item(item,quantity):
 	inventory[item] = inventory.get(item, 0) + int(quantity)
 
-
-#Cup
+#Spawned Fruit
 var cup = {"ice":0, "sweetener":0, "flavoring":0}
 
 
