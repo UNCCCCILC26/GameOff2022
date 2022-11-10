@@ -25,7 +25,12 @@ func remove_item(item,quantity):
 #Spawned Fruit
 var cup = {"ice":0, "sweetener":0, "flavoring":0}
 
-
+#Gun Type
+var gunValue = 1
+func upgradeGun():
+	gunValue += 1
+func getGunValue():
+	return gunValue
 func _process(delta):
 	pass
 
