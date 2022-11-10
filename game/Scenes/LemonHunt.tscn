@@ -21,11 +21,11 @@ anchor_mode = 0
 current = true
 script = ExtResource( 5 )
 
-[node name="UI" type="Control" parent="."]
+[node name="UI" type="Control" parent="HuntView"]
 margin_right = 40.0
 margin_bottom = 40.0
 
-[node name="Score" type="Label" parent="UI"]
+[node name="Score" type="Label" parent="HuntView/UI"]
 modulate = Color( 0, 0, 0, 1 )
 margin_right = 40.0
 margin_bottom = 14.0

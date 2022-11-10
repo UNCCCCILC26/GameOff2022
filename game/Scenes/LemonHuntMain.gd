@@ -15,7 +15,7 @@ func randomSpawn(fruit):
 	
 func incrementScore():
 	score += 1
-	$UI/Score.text = "Fruits Captured: %s" % score
+	$HuntView/UI/Score.text = "Fruits Captured: %s" % score
 
 func _ready():
 	randomSpawn(lemonInstance)

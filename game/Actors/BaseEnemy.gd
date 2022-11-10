@@ -19,7 +19,7 @@ func _on_Hitbox_area_shape_exited(_a1,area,_a3,_a4):
 
 func _process(_delta):
 	if Input.is_action_just_pressed("mouse_clicked") and scope_inside == true:
-		hitpoints -= 1
+		hitpoints -= Global.getGunValue()
 		emit_signal("Hit")
 		if(hitpoints <= 0):
 			queue_free()
