@@ -3,6 +3,9 @@ extends KinematicBody2D
 var base_speed = 200
 var pointer_inside = []
 var velocity = Vector2(1,0)
+signal good
+signal ok
+signal bad
 
 func _process(delta):
 	if Input.is_action_just_pressed("mouse_clicked"):
