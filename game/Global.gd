@@ -31,7 +31,5 @@ func upgradeGun():
 	gunValue += 1
 func getGunValue():
 	return gunValue
-func _process(delta):
-	pass
 
 #What ever cody said is wrong.

@@ -11,7 +11,7 @@ var gap = Vector2(mapSize.x-screenSize.x,mapSize.y-screenSize.y)
 func _ready():
 	print(cameraHomePosition)
 
-func _process(delta):
+func _process(_delta):
 	var mousePos = get_viewport().get_mouse_position()
 	var distancePercentage = Vector2((gap.x - mousePos.x)/(screenSize.x-(screenSize.x*edgeScale)),(gap.y - mousePos.y)/(screenSize.y-(screenSize.y*edgeScale)))
 	if(distancePercentage.x < 0):

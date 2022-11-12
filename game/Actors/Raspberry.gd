@@ -7,7 +7,7 @@ func _ready():
 	base_speed = 100
 	hitpoints = 2
 	rng.randomize()
-	var randY = rng.randf_range(50,screenSize.y-50)
+	var randY = rng.randi_range(1,3)*150
 	if(rng.randi_range(0,1) == 1):
 		self.position = Vector2(-30,randY)
 		moveRight()
