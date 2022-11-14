@@ -1,0 +1,9 @@
+[gd_scene format=2]
+
+[node name="Hunting" type="Control"]
+
+[node name="Background" type="ColorRect" parent="."]
+margin_left = 1.0
+margin_right = 1020.0
+margin_bottom = 579.0
+color = Color( 0.0313726, 0.105882, 0.0313726, 1 )
