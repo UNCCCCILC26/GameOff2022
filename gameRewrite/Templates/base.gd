@@ -16,3 +16,12 @@ func _process(_delta):
 
 func pauseMenu():
 	get_tree().root.add_child(load("res://Global/TitlePage.tscn").instance())
+	
+func shop():
+	pass
+	
+func day():
+	pass
+	
+func alley():
+	pass

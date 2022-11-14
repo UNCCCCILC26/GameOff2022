@@ -1,12 +1,108 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Resturaunt/Resteraunt.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Shitty Placeholder Stuff/building-a-pine-wood-1x12-bookshelf.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Shitty Placeholder Stuff/Screenshot_1.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Shitty Placeholder Stuff/istockphoto-682289128-612x612.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Shitty Placeholder Stuff/fella.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Shitty Placeholder Stuff/Sunshine-sun-clip-art-with-transparent-background-free.png" type="Texture" id=6]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 16, 257, 0, 0, 0, 0, 140, 159, 0, 0, 0, 0, 238, 92, 0, 0, 0, 0, 349, 46, 0, 0, 0, 0, 466, 31, 0, 0, 0, 0, 570, 33, 0, 0, 0, 0, 671, 38, 0, 0, 0, 0, 768, 75, 0, 0, 0, 0, 847, 129, 0, 0, 0, 0, 959, 218, 21.2487, 2.49985, -21.2487, -2.49985, 1032, 292, 0, 0, 0, 0, 16, 257 )
+}
 
 [node name="Resteraunt" type="Control"]
 script = ExtResource( 1 )
 
 [node name="Background" type="ColorRect" parent="."]
 margin_left = 1.0
-margin_right = 1020.0
-margin_bottom = 579.0
-color = Color( 0, 1, 0.0156863, 1 )
+margin_right = 1030.0
+margin_bottom = 610.0
+color = Color( 0, 0.462745, 1, 1 )
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource( 1 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2( 16, 257 )
+rotation = -0.668813
+lookahead = 34.118
+
+[node name="Sunshine-sun-clip-art-with-transparent-background-free" type="Sprite" parent="Path2D/PathFollow2D"]
+position = Vector2( 4.83392, -1.27808 )
+scale = Vector2( 0.0549194, 0.0549194 )
+texture = ExtResource( 6 )
+
+[node name="Building-a-pine-wood-1X12-bookshelf" type="Sprite" parent="."]
+position = Vector2( 482, 441 )
+scale = Vector2( 2.0918, 0.837866 )
+texture = ExtResource( 2 )
+
+[node name="Istockphoto-682289128-612X612" type="Sprite" parent="."]
+position = Vector2( 914, 175 )
+scale = Vector2( 0.355319, 0.33842 )
+texture = ExtResource( 4 )
+
+[node name="Daily Balance" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 858.0
+margin_top = 157.0
+margin_right = 979.0
+margin_bottom = 217.0
+text = "$1000"
+align = 1
+valign = 1
+
+[node name="DayTime" type="Timer" parent="."]
+wait_time = 10.0
+
+[node name="Squeeze Station" type="TextureButton" parent="."]
+margin_left = 144.0
+margin_top = 448.0
+margin_right = 212.0
+margin_bottom = 577.0
+texture_normal = ExtResource( 3 )
+expand = true
+
+[node name="Pour Station" type="TextureButton" parent="."]
+margin_left = 495.0
+margin_top = 456.0
+margin_right = 563.0
+margin_bottom = 585.0
+texture_normal = ExtResource( 3 )
+expand = true
+
+[node name="Ice Station" type="TextureButton" parent="."]
+margin_left = 830.0
+margin_top = 452.0
+margin_right = 898.0
+margin_bottom = 581.0
+texture_normal = ExtResource( 3 )
+expand = true
+
+[node name="Customers" type="TextureButton" parent="."]
+margin_left = 417.0
+margin_top = 75.0
+margin_right = 684.0
+margin_bottom = 237.0
+texture_normal = ExtResource( 5 )
+expand = true
+
+[node name="Powder Mix Station" type="TextureButton" parent="."]
+margin_left = 323.0
+margin_top = 297.0
+margin_right = 391.0
+margin_bottom = 426.0
+texture_normal = ExtResource( 3 )
+expand = true
+
+[node name="Add-Ons Station" type="TextureButton" parent="."]
+margin_left = 673.0
+margin_top = 289.0
+margin_right = 741.0
+margin_bottom = 418.0
+texture_normal = ExtResource( 3 )
+expand = true
+
+[connection signal="timeout" from="DayTime" to="." method="_on_DayTime_timeout"]

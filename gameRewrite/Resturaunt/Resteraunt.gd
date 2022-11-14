@@ -1,10 +1,16 @@
 extends "res://Templates/base.gd"
 
-# Called when the node enters the scene tree for the first time.
+var balance = 300
+
 func _ready():
-	pass # Replace with function body.
+	$DayTime.start()
+	$"Daily Balance".text = "$" + str(balance)
+	
+func _process(_delta):
+	$"Daily Balance".text = "$" + str(balance)
+	$Path2D/PathFollow2D.offset = ($DayTime.wait_time - $DayTime.time_left) * (1000/$DayTime.wait_time)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _on_DayTime_timeout():
+	print("DAYTIME OVER")
+	Global.playerBalance += balance
+	.shop()
