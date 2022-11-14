@@ -5,13 +5,14 @@ extends Control
 # var a = 2
 # var b = "text"
 
+var popupsOpen = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
 func _process(_delta):
-	if Input.is_action_just_pressed("ui_cancel"):
+	if Input.is_action_just_pressed("ui_cancel") and !popupsOpen:
 		pauseMenu()
 
 func pauseMenu():
@@ -25,3 +26,6 @@ func day():
 	
 func alley():
 	pass
+
+func openedPopups(var boolean: bool):
+	popupsOpen = boolean

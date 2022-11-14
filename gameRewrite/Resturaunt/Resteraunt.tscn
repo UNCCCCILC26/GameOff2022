@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Resturaunt/Resteraunt.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Shitty Placeholder Stuff/building-a-pine-wood-1x12-bookshelf.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Assets/Shitty Placeholder Stuff/istockphoto-682289128-612x612.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Shitty Placeholder Stuff/fella.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Shitty Placeholder Stuff/Sunshine-sun-clip-art-with-transparent-background-free.png" type="Texture" id=6]
+[ext_resource path="res://Resturaunt/CustomerPanel.tscn" type="PackedScene" id=7]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
@@ -57,6 +58,16 @@ valign = 1
 [node name="DayTime" type="Timer" parent="."]
 wait_time = 10.0
 
+[node name="Customers" type="TextureButton" parent="."]
+margin_left = 417.0
+margin_top = 75.0
+margin_right = 684.0
+margin_bottom = 237.0
+texture_normal = ExtResource( 5 )
+expand = true
+
+[node name="Control" parent="Customers" instance=ExtResource( 7 )]
+
 [node name="Squeeze Station" type="TextureButton" parent="."]
 margin_left = 144.0
 margin_top = 448.0
@@ -81,14 +92,6 @@ margin_bottom = 581.0
 texture_normal = ExtResource( 3 )
 expand = true
 
-[node name="Customers" type="TextureButton" parent="."]
-margin_left = 417.0
-margin_top = 75.0
-margin_right = 684.0
-margin_bottom = 237.0
-texture_normal = ExtResource( 5 )
-expand = true
-
 [node name="Powder Mix Station" type="TextureButton" parent="."]
 margin_left = 323.0
 margin_top = 297.0
@@ -106,3 +109,10 @@ texture_normal = ExtResource( 3 )
 expand = true
 
 [connection signal="timeout" from="DayTime" to="." method="_on_DayTime_timeout"]
+[connection signal="pressed" from="Customers" to="." method="_on_Customers_pressed"]
+[connection signal="hide" from="Customers/Control" to="." method="_on_Control_hide"]
+[connection signal="pressed" from="Squeeze Station" to="." method="_on_Squeeze_Station_pressed"]
+[connection signal="pressed" from="Pour Station" to="." method="_on_Pour_Station_pressed"]
+[connection signal="pressed" from="Ice Station" to="." method="_on_Ice_Station_pressed"]
+[connection signal="pressed" from="Powder Mix Station" to="." method="_on_Powder_Mix_Station_pressed"]
+[connection signal="pressed" from="Add-Ons Station" to="." method="_on_AddOns_Station_pressed"]
