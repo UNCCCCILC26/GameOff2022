@@ -24,7 +24,6 @@ var progress = {
 enum Scene {Resturant, Shop, Hunting}
 var currentScene = Scene.Resturant
 
-
 func save():
 	return {
 		"balance": playerBalance,
